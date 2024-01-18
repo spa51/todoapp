@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { ReplaceSpacePipe } from '@shared/pipes/replace-space.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
