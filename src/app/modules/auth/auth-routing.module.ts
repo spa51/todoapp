@@ -1,17 +1,15 @@
+import { LoginPageComponent } from './components/login-page/login-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginPageComponent } from './page/login-page.component';
-
-const routes: Routes = [ //TODO: http://localhost/auth/
-{
-  path:'login',
-  component:LoginPageComponent
-},
-{
-  path:'register',
-  component:LoginPageComponent
-}
-
+const routes: Routes = [
+  {
+    path: 'login',
+    component:LoginPageComponent
+  },
+  {
+    path: 'register',
+    component:LoginPageComponent
+  }
 ];
 
 @NgModule({

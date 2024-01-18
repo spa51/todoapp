@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
+import { ReplaceSpacePipe } from '@shared/pipes/replace-space.pipe';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { AuthRoutingModule } from './auth-routing.module';
     CommonModule,
     AuthRoutingModule,
     SharedModule
-  ]
+  ],
+  providers:[ReplaceSpacePipe]
 })
 export class AuthModule { }
