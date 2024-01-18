@@ -19,14 +19,35 @@ export class RegisterFormComponent {
     this.registerForm = new FormGroup(
       {
         email: new FormControl('',[Validators.required,Validators.email]),
-        name: new FormControl('',[Validators.required,Validators.minLength(3)]),
-        password: new FormControl('',[Validators.required,Validators.minLength(3)]),
-        passwordConfirm: new FormControl('',[Validators.required,Validators.minLength(3)])
+        name: new FormControl('',[Validators.required, Validators.minLength(3)]),
+        lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),
+        phone: new FormControl('',[Validators.required, Validators.minLength(3)]),
+        aboutMe: new FormControl('',[Validators.required, Validators.minLength(3)])
       },
       {
         validators:passwordMatchValidator
       }
     )
+  }
+
+  testLoaded():void{
+
+    const mockData ={
+      email:'santi@gmail.com',
+      name:'santiago',
+      lastName:'arroyave',
+      phone:'3013872756',
+      aboutMe:'hola santiago'
+    }
+    this.registerForm.setValue(mockData)
+  }
+
+  testUploaded():void{
+
+    const mockData ={
+      phone:'101010101'
+    }
+    this.registerForm.patchValue(mockData)
   }
 
 }
