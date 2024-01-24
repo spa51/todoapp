@@ -33,6 +33,8 @@ export class RegisterFormComponent {
         validators:passwordMatchValidator
       }
     )
+
+    this.registerForm.valueChanges.subscribe((res) =>{console.log('❤❤🤣',res)})
   }
 
   testLoaded():void{
