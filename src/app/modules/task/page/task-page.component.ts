@@ -1,26 +1,22 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../components/header/header.component";
-import { NgIf } from '@angular/common';
+import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 
 @Component({
     selector: 'app-task-page',
     standalone: true,
     templateUrl: './task-page.component.html',
     styleUrl: './task-page.component.css',
-    imports: [HeaderComponent,NgIf]
+    imports: [HeaderComponent,NgSwitch,NgSwitchCase,NgSwitchDefault]
 })
 export class TaskPageComponent {
 
-    showText = false;
+    case:number = 11;
 
     constructor(){}
 
     ngOnInit(){
 
-    }
-
-    changeText():void{
-        this.showText = !this.showText;
     }
 
 }

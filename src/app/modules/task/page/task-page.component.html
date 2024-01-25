@@ -1,5 +1,9 @@
 <app-header></app-header>
-<button (click)="changeText()">Cambiar</button>
-<div *ngIf="showText">
-    Hola Mundo ✌🤞
+
+<div class="padre" [ngSwitch]="case">
+
+    <div *ngSwitchCase="1" class="hijo">Hola soy pedro</div>
+    <div *ngSwitchCase="2" class="hijo">Hola soy maria</div>
+    <div *ngSwitchCase="3" class="hijo">Hola soy pedro y maria</div>
+    <div *ngSwitchDefault >Defecto</div>
 </div>
