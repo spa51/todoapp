@@ -2,12 +2,14 @@
 
 <div>
 
-    <img appImgBroken class="imagen" src="https://avatars-.githubusercontent.com/u/15802366?v=4" alt="">
-
-    <img appImgBroken class="imagen" src="https://avatars.githubusercontent.com/u/15802366?v=4" alt="">
-
-    <img appImgBroken class="imagen" src="https://avatars-.githubusercontent.com/u/15802366?v=4" alt="">
-
-    <img appImgBroken class="imagen" src="https://avatars.githubusercontent.com/u/15802366?v=4" alt="">
+    <ul *ngIf="results.length > 0 else tplNotFound ">
+        <li *ngFor="let item of results">
+            {{item}}
+        </li>
+    </ul>
 
 </div>
+
+<ng-template #tplNotFound>
+    <p> No hay resultados 🤔 </p>
+</ng-template>
