@@ -1,15 +1,13 @@
 <app-header></app-header>
+<ul>
+    <li *ngFor="let user of listUser">
+        <ng-container *ngTemplateOutlet="tpHello;context:{currentUser:user}">
+        </ng-container>
+        
+    </li>
+</ul>
 
-<div>
 
-    <ul *ngIf="results.length > 0 else tplNotFound ">
-        <li *ngFor="let item of results">
-            {{item}}
-        </li>
-    </ul>
-
-</div>
-
-<ng-template #tplNotFound>
-    <p> No hay resultados 🤔 </p>
+<ng-template #tpHello let-myuser="currentUser">
+    Hola buenos dias {{myuser?.name}} 💕
 </ng-template>
